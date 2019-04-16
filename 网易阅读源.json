@@ -1,0 +1,282 @@
+{
+  "name" : "网易阅读",
+  "enable" : true,
+  "authorId" : "6d2370e2088b9556423c257fd3f8c5dd",
+  "bookDetail" : {
+    "forGetMethod" : true,
+    "parser" : {
+      "coverUrl" : "coverImg",
+      "statusText" : [
+        "state",
+        "@dyn:check(content == 1, return 完本); return 连载"
+      ],
+      "lastUpdateDate" : [
+        "updateTime",
+        "@dyn:t = content.doubleValue;\nt1 = calc(t \/ 1000);\nNSDate.dateWithTimeIntervalSince1970:t1"
+      ],
+      "wordCount" : "charSize",
+      "desc" : "shareDescription"
+    },
+    "params" : {
+
+    },
+    "url" : "@dyn:hid=source.helpId;format('https:\/\/yuedu.163.com\/getBook.do?id=%@', hid);"
+  },
+  "homeUrl" : "https:\/\/easyread.163.com\/",
+  "bookWorld" : {
+    "作品分类" : {
+      "nextPageParams" : {
+
+      },
+      "parser" : {
+        "author" : "author",
+        "_1" : {
+          "helpId" : "id"
+        },
+        "_list" : "list",
+        "bookName" : "title",
+        "statusText" : [
+          "integrity",
+          "@dyn:check(content == 1, return 完成); return 连载;"
+        ],
+        "coverUrl" : "cover",
+        "lastUpdateDate" : [
+          "updateTime",
+          "@dyn:t = content.doubleValue;\nt1 = calc(t \/ 1000);\nNSDate.dateWithTimeIntervalSince1970:t1"
+        ],
+        "desc" : "content",
+        "typeText" : "category"
+      },
+      "forGetMethod" : true,
+      "params" : {
+        "wordCount" : "0",
+        "pay" : "2",
+        "bookStatus" : "0",
+        "sort" : "1",
+        "page" : "%@calc(pageIndex+1)"
+      },
+      "urls" : [
+        {
+          "sex" : 2,
+          "name" : "出版图书",
+          "_NewSubItems__" : [
+            {
+              "name" : "人文社科",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=2300"
+            },
+            {
+              "name" : "品质生活",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=2800"
+            },
+            {
+              "name" : "成功励志",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=2600"
+            },
+            {
+              "name" : "经济管理",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=2400"
+            },
+            {
+              "name" : "文学作品",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=2100"
+            },
+            {
+              "name" : "自然科学",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=2900"
+            },
+            {
+              "name" : "亲子少儿",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=2700"
+            },
+            {
+              "name" : "计算机",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=3000"
+            },
+            {
+              "name" : "培训考试",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=3100"
+            },
+            {
+              "name" : "杂志期刊",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=12000"
+            }
+          ]
+        },
+        {
+          "sex" : 0,
+          "name" : "网文分类",
+          "_NewSubItems__" : [
+            {
+              "name" : "都市生活",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=7"
+            },
+            {
+              "name" : "历史传奇",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=11"
+            },
+            {
+              "name" : "玄幻仙侠",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=1"
+            },
+            {
+              "name" : "悬疑探险",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=5"
+            },
+            {
+              "name" : "灵异恐怖",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=6"
+            },
+            {
+              "name" : "短篇小说",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=12"
+            },
+            {
+              "name" : "科幻奇幻",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=2"
+            },
+            {
+              "name" : "军事谍战",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=3"
+            },
+            {
+              "name" : "同人网游",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=10"
+            }
+          ]
+        },
+        {
+          "sex" : 1,
+          "name" : "采薇书院",
+          "_NewSubItems__" : [
+            {
+              "name" : "浪漫青春",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=22"
+            },
+            {
+              "name" : "都市言情",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=8"
+            },
+            {
+              "name" : "古风古韵",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=24"
+            },
+            {
+              "name" : "穿越架空",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=9"
+            },
+            {
+              "name" : "宫斗宅斗",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=18"
+            },
+            {
+              "name" : "种田重生",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=17"
+            },
+            {
+              "name" : "短篇美文",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=16"
+            },
+            {
+              "name" : "仙侠幻情",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=13"
+            },
+            {
+              "name" : "灵异推理",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=14"
+            },
+            {
+              "name" : "同人网游",
+              "url" : "https:\/\/easyread.163.com\/source\/v2\/searchBook.json?catId=15"
+            }
+          ]
+        }
+      ],
+      "maxPageCount" : "100",
+      "nextPageForGetMedthod" : true,
+      "nextPageUrl" : "next"
+    }
+  },
+  "chapterDetail" : {
+    "forGetMethod" : true,
+    "parser" : {
+      "content" : [
+        "content",
+        "@dyn:d=JxdSecuritySub.Base64Decode:content;\nc=NSString.alloc.initWithData:d encoding:4;",
+        "@xpath:\/\/p\/\/text()"
+      ]
+    },
+    "params" : {
+
+    }
+  },
+  "weight" : 1,
+  "priorityEncoding" : 4,
+  "needSupportDynTask" : true,
+  "sourceDetail" : {
+    "forGetMethod" : true,
+    "parser" : {
+      "lastUpdateDate" : [
+        "updateTime",
+        "@dyn:t = content.doubleValue;\nt1 = calc(t \/ 1000);\nNSDate.dateWithTimeIntervalSince1970:t1"
+      ],
+      "_1" : {
+        "_list" : "portions",
+        "title" : "title",
+        "url" : "@dyn:\nw=content.objectForKey:charSize;\ncheck(!w, return nil);\ncheck(w <= 0, return nil);\nhid=source.helpId;\ncid=content.objectForKey:id;\nbid=content.objectForKey:bigContentId;\nreturn format(\"http:\/\/yuedu.163.com\/getArticleContent.do?sourceUuid=%@&articleUuid=%@&bigContentId=%@\",hid, cid, bid)"
+      }
+    },
+    "params" : {
+
+    },
+    "url" : "@dyn:hid=source.helpId;format('https:\/\/yuedu.163.com\/getBook.do?id=%@', hid);"
+  },
+  "lastModifyTime" : "2019-01-20 17:37:15",
+  "responseType" : 0,
+  "searchBook" : {
+    "nextPageParams" : {
+
+    },
+    "parser" : {
+      "author" : ".\/author\/name\/text()",
+      "_1" : {
+        "helpId" : ".\/\/id\/text()"
+      },
+      "_list" : "\/\/entry",
+      "bookName" : ".\/title\/text()",
+      "statusText" : [
+        ".\/\/integrity\/text()",
+        "@dyn:check(content == 1, return 完本); return 连载"
+      ],
+      "coverUrl" : ".\/link\/@href",
+      "lastUpdateDate" : ".\/updated\/text()",
+      "desc" : ".\/content\/text()",
+      "typeText" : ".\/\/category\/text()"
+    },
+    "forGetMethod" : true,
+    "params" : {
+      "from" : "0",
+      "pay" : "2",
+      "channel" : "0",
+      "sort" : "0",
+      "bookStatus" : "0",
+      "v2" : "2",
+      "query" : "%@",
+      "wordCount" : "0",
+      "page" : "%@calc(pageIndex+1)"
+    },
+    "nextPageForGetMedthod" : true,
+    "maxPageCount" : "2",
+    "url" : "https:\/\/easyread.163.com\/searchbook2.atom"
+  },
+  "thinkingWord" : {
+    "forGetMethod" : true,
+    "parser" : {
+      "_list" : "book",
+      "keyword" : "name"
+    },
+    "params" : {
+
+    },
+    "url" : "http:\/\/yuedu.163.com\/querySearchHints.do?keyword=%@"
+  }
+}
