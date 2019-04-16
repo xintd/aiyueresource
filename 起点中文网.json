@@ -1,0 +1,367 @@
+{
+  "bookWorld" : {
+    "起点排行榜" : {
+      "nextPageParams" : {
+
+      },
+      "parser" : {
+        "author" : ".\/\/a[@class=\"name\"]\/\/text()",
+        "_1" : {
+          "dirURL" : [
+            ".\/\/h4\/\/a",
+            "substring-after(@href,'info\/')",
+            "concat('https:\/\/book.qidian.com\/ajax\/book\/category?bookId=',.)"
+          ]
+        },
+        "_list" : "\/\/ul\/\/li[@data-rid]",
+        "bookName" : ".\/\/h4\/\/text()",
+        "statusText" : ".\/\/p[@class=\"author\"]\/span\/text()",
+        "coverUrl" : ".\/\/div[@class=\"book-img-box\"]\/\/img\/@src",
+        "lastUpdateDate" : ".\/\/p[@class=\"update\"]\/span",
+        "desc" : ".\/\/p[@class=\"intro\"]",
+        "typeText" : ".\/\/p[@class=\"author\"]\/a[2]\/text()"
+      },
+      "forGetMethod" : true,
+      "params" : {
+        "style" : "1",
+        "page" : "%@calc(pageIndex + 1)"
+      },
+      "nextPageForGetMedthod" : true,
+      "maxPageCount" : "25",
+      "urls" : [
+        {
+          "sex" : 0,
+          "name" : "完本榜",
+          "_NewSubItems__" : [
+            {
+              "name" : "全部",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=-1"
+            },
+            {
+              "name" : "玄幻",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=21"
+            },
+            {
+              "name" : "奇幻",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=1"
+            },
+            {
+              "name" : "武侠",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=2"
+            },
+            {
+              "name" : "仙侠",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=22"
+            },
+            {
+              "name" : "都市",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=4"
+            },
+            {
+              "name" : "现实",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=15"
+            },
+            {
+              "name" : "军事",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=6"
+            },
+            {
+              "name" : " 历史",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=5"
+            },
+            {
+              "name" : "游戏",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=7"
+            },
+            {
+              "name" : "体育",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=8"
+            },
+            {
+              "name" : "科幻",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=9"
+            },
+            {
+              "name" : "灵异",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=10"
+            },
+            {
+              "name" : "二次元",
+              "url" : "https:\/\/www.qidian.com\/rank\/fin?chn=12"
+            }
+          ]
+        },
+        {
+          "sex" : 0,
+          "name" : "收藏榜",
+          "_NewSubItems__" : [
+            {
+              "name" : "全部",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=-1"
+            },
+            {
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=21",
+              "name" : "玄幻"
+            },
+            {
+              "name" : "奇幻",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=1"
+            },
+            {
+              "name" : "武侠",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=2"
+            },
+            {
+              "name" : "仙侠",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=22"
+            },
+            {
+              "name" : "都市",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=4"
+            },
+            {
+              "name" : "现实",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=15"
+            },
+            {
+              "name" : "军事",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=6"
+            },
+            {
+              "name" : " 历史",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=5"
+            },
+            {
+              "name" : "游戏",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=7"
+            },
+            {
+              "name" : "体育",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=8"
+            },
+            {
+              "name" : "科幻",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=9"
+            },
+            {
+              "name" : "灵异",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=10"
+            },
+            {
+              "name" : "二次元",
+              "url" : "https:\/\/www.qidian.com\/rank\/collect?chn=12"
+            }
+          ]
+        },
+        {
+          "sex" : 1,
+          "name" : "经典完本榜",
+          "_NewSubItems__" : [
+            {
+              "name" : "全部",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/fin?chn=-1"
+            },
+            {
+              "name" : "古代言情",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/fin?chn=80"
+            },
+            {
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/fin?chn=81",
+              "name" : "仙侠奇缘"
+            },
+            {
+              "name" : " 现代言情",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/fin?chn=82"
+            },
+            {
+              "name" : "浪漫青春",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/fin?chn=83"
+            },
+            {
+              "name" : "玄幻言情",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/fin?chn=84"
+            },
+            {
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/fin?chn=85",
+              "name" : "悬疑灵异"
+            },
+            {
+              "name" : "科幻空间",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/fin?chn=86"
+            },
+            {
+              "name" : "游戏竞技",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/fin?chn=88"
+            }
+          ]
+        },
+        {
+          "sex" : 1,
+          "name" : "收藏榜",
+          "_NewSubItems__" : [
+            {
+              "name" : "全部",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/collect?chn=-1"
+            },
+            {
+              "name" : "古代言情",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/collect?chn=80"
+            },
+            {
+              "name" : "仙侠奇缘",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/collect?chn=81"
+            },
+            {
+              "name" : "现代言情",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/collect?chn=82"
+            },
+            {
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/collect?chn=83",
+              "name" : "浪漫青春"
+            },
+            {
+              "name" : "玄幻言情",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/collect?chn=84"
+            },
+            {
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/collect?chn=85",
+              "name" : "悬疑灵异"
+            },
+            {
+              "name" : "科幻空间",
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/collect?chn=86"
+            },
+            {
+              "url" : "https:\/\/www.qidian.com\/mm\/rank\/collect?chn=88",
+              "name" : "游戏竞技"
+            }
+          ]
+        }
+      ],
+      "type" : 2
+    }
+  },
+  "weight" : 13,
+  "needSupportDynTask" : true,
+  "searchSource" : {
+    "forGetMethod" : true,
+    "parser" : {
+      "_list" : "",
+      "dirURL" : "",
+      "webName" : ""
+    },
+    "params" : {
+
+    }
+  },
+  "responseType" : 0,
+  "authorInfo" : "",
+  "enable" : true,
+  "name" : "起点中文",
+  "chapterDetail" : {
+    "forGetMethod" : true,
+    "parser" : {
+      "content" : "\/\/div[starts-with(@class,\"read-content\")]"
+    },
+    "params" : {
+
+    }
+  },
+  "bookWorldGroupName" : "追书&起点",
+  "priorityEncoding" : 4,
+  "thinkingWord" : {
+    "forGetMethod" : true,
+    "parser" : {
+      "_list" : "suggestions",
+      "keyword" : "value"
+    },
+    "params" : {
+
+    },
+    "url" : "https:\/\/www.qidian.com\/ajax\/Search\/AutoComplete?siteid=1&query=%@",
+    "responseType" : 3
+  },
+  "lastModifyTime" : "2018-12-06 20:41:45",
+  "homeUrl" : "https:\/\/www.qidian.com\/",
+  "searchBook" : {
+    "parser" : {
+      "author" : ".\/\/a[@class=\"name\"]\/\/text()",
+      "_1" : {
+        "dirURL" : [
+          ".\/\/h4\/\/a",
+          "substring-after(@href,'info\/')",
+          "concat('https:\/\/book.qidian.com\/ajax\/book\/category?bookId=',.)"
+        ],
+        "helpId" : [
+          ".\/\/h4\/\/a",
+          "concat('https:',@href)"
+        ]
+      },
+      "_list" : "\/\/div[@id=\"result-list\"]\/\/li",
+      "bookName" : ".\/\/h4\/\/text()",
+      "statusText" : ".\/\/p[@class=\"author\"]\/\/span\/text()",
+      "coverUrl" : ".\/\/div[@class=\"book-img-box\"]\/\/img\/@src",
+      "lastUpdateDate" : ".\/\/p[@class=\"update\"]\/span",
+      "desc" : ".\/\/p[@class=\"intro\"]",
+      "typeText" : ".\/\/p[@class=\"author\"]\/\/a[2]\/text()"
+    },
+    "params" : {
+      "kw" : "%@",
+      "page" : "%@calc(pageIndex+1)"
+    },
+    "forGetMethod" : true,
+    "nextPageForGetMedthod" : true,
+    "nextPageParams" : {
+
+    },
+    "maxPageCount" : "2",
+    "url" : "https:\/\/www.qidian.com\/search"
+  },
+  "httpConfigs" : {
+    "headers" : {
+
+    },
+    "httpCreateCode" : "",
+    "useCookies" : false
+  },
+  "password" : "",
+  "authorId" : "6d2370e2088b9556423c257fd3f8c5dd",
+  "sourceDetail" : {
+    "nextPageParams" : {
+
+    },
+    "parser" : {
+      "_list" : "data.vs",
+      "_1" : {
+        "_list" : "cs",
+        "title" : "cN",
+        "url" : [
+          "cU",
+          "@xpath:concat(\"https:\/\/read.qidian.com\/chapter\/\",\/\/text())"
+        ]
+      },
+      "lastUpdateDate" : [
+        "@dyn:self.respContent",
+        "@json:data.vs[-1].cs[-1].uT"
+      ]
+    },
+    "forGetMethod" : true,
+    "params" : {
+
+    },
+    "nextPageForGetMedthod" : true,
+    "maxPageCount" : 1,
+    "responseType" : 3
+  },
+  "bookDetail" : {
+    "forGetMethod" : true,
+    "parser" : {
+      "coverUrl" : "\/\/a[@id=\"bookImg\"]\/img\/@src",
+      "desc" : "\/\/div[@class=\"book-intro\"]"
+    },
+    "params" : {
+
+    },
+    "url" : "@dyn:source.helpId"
+  }
+}
