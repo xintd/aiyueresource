@@ -1,0 +1,106 @@
+{
+  "homeUrl": "https:\/\/www.22ff.org",
+  "enable": true,
+  "authorId": "22f651ef2ff67237bac9d519b279a919",
+  "bookWorld": {
+    "书籍分类": {
+      "forGetMethod": true,
+      "parser": {
+        "_1": {
+          "dirURL": [
+            ".\/\/li[@class=\"neirong1\"]\/a[1]",
+            "concat('https:\/\/www.22ff.org',.\/@href)"
+          ]
+        },
+        "author": ".\/\/li[@class=\"neirong4\"]\/a\/text()",
+        "bookName": ".\/\/li[@class=\"neirong1\"]\/a[1]\/text()",
+        "_list": "\/\/div[@class=\"neirong\"]\/\/ul"
+      },
+      "params": {},
+      "urls": [
+        {
+          "sex": 2,
+          "name": "言情",
+          "url": "https:\/\/www.22ff.org\/yanqing"
+        },
+        {
+          "sex": 2,
+          "url": "https:\/\/www.22ff.org\/xuanhuan",
+          "name": "玄幻"
+        },
+        {
+          "sex": 2,
+          "name": "都市",
+          "url": "https:\/\/www.22ff.org\/dushi"
+        },
+        {
+          "sex": 2,
+          "name": "军事",
+          "url": "https:\/\/www.22ff.org\/junshi"
+        },
+        {
+          "sex": 2,
+          "name": "历史",
+          "url": "https:\/\/www.22ff.org\/lishi"
+        },
+        {
+          "sex": 2,
+          "name": "武侠",
+          "url": "https:\/\/www.22ff.org\/wuxia"
+        },
+        {
+          "sex": 2,
+          "name": "仙侠",
+          "url": "https:\/\/www.22ff.org\/xianxia"
+        }
+      ]
+    }
+  },
+  "chapterDetail": {
+    "forGetMethod": true,
+    "parser": {
+      "content": [
+        "\/\/div[@id=\"chapter_content\"]\/\/p\/text()",
+        "@regex:<a .*<\/a> @=>"
+      ]
+    },
+    "params": {}
+  },
+  "weight": 1,
+  "priorityEncoding": 4,
+  "needSupportDynTask": true,
+  "sourceDetail": {
+    "forGetMethod": true,
+    "parser": {
+      "_1": {
+        "_list": "\/\/div[@class=\"neirong\"]\/\/div[@class=\"clc\"]",
+        "title": ".\/a\/text()",
+        "url": [
+          ".\/a",
+          "concat('https:\/\/www.22ff.org',.\/@href)"
+        ]
+      }
+    },
+    "params": {}
+  },
+  "lastModifyTime": "2018-12-17 10:14:41",
+  "responseType": 0,
+  "searchBook": {
+    "forGetMethod": true,
+    "parser": {
+      "_1": {
+        "dirURL": [
+          ".\/\/li[@class=\"neirong1\"]\/a[1]",
+          "concat('https:\/\/www.22ff.org',.\/@href)"
+        ]
+      },
+      "author": ".\/\/li[@class=\"neirong4\"]\/a\/text()",
+      "bookName": ".\/\/li[@class=\"neirong1\"]\/a[1]\/text()",
+      "_list": "\/\/div[@class=\"neirong\"]\/\/ul",
+      "lastUpdateDate": ".\/\/li[@class=\"neirong3\"]\/text()"
+    },
+    "params": {},
+    "url": "https:\/\/www.22ff.org\/s_%@"
+  },
+  "name": "爱书网"
+}

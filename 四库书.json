@@ -1,0 +1,178 @@
+{
+  "name": "四库书小说网",
+  "enable": true,
+  "authorId": "22f651ef2ff67237bac9d519b279a919",
+  "bookDetail": {
+    "forGetMethod": true,
+    "parser": {
+      "coverUrl": "\/\/div[@id=\"fmimg\"]\/img\/@src",
+      "desc": "\/\/div[@id=\"intro\"]\/p\/text()",
+      "lastUpdateDate": [
+        "\/\/div[@id=\"info\"]\/p[3]\/text()",
+        "substring-after(., \"：\")"
+      ]
+    },
+    "params": {}
+  },
+  "homeUrl": "http:\/\/www.sikushu.org",
+  "bookWorld": {
+    "书籍分类": {
+      "nextPageParams": {},
+      "parser": {
+        "author": ".\/span[@class=\"s5\"]\/text()",
+        "_1": {
+          "dirURL": [
+            ".\/span[@class=\"s2\"]\/a",
+            "concat('http:\/\/www.sikushu.org',.\/@href)"
+          ]
+        },
+        "_list": "\/\/div[@id=\"newscontent\"]\/div[@class=\"l\"]\/ul\/\/li",
+        "bookName": ".\/span[@class=\"s2\"]\/a\/text()",
+        "statusText": ".\/\/div[@class=\"ji\"]\/text()[4]",
+        "coverUrl": [
+          ".\/\/td[@class=\"odd\"]\/a\/img",
+          "concat('http:\/\/www.sikushu.org',.\/@src)"
+        ],
+        "lastUpdateDate": [
+          ".\/span[@class=\"s3\"]\/text()",
+          "@regex:( .*) @=>"
+        ],
+        "typeText": [
+          ".\/\/div[@class=\"ji\"]\/text()[3]",
+          "substring-after(., \"[\")",
+          "substring-before(., \"]\")"
+        ],
+        "desc": ".\/\/div[@class=\"ji\"]\/text()[6]"
+      },
+      "forGetMethod": true,
+      "params": {},
+      "urls": [
+        {
+          "sex": 2,
+          "name": "玄幻[今日更新]",
+          "url": "http:\/\/sikushu.org\/xuanhuan\/"
+        },
+        {
+          "sex": 2,
+          "name": "修真[今日更新]",
+          "url": "http:\/\/sikushu.org\/xiuzhen\/"
+        },
+        {
+          "sex": 2,
+          "url": "http:\/\/sikushu.org\/dushi\/",
+          "name": "都市[今日更新]"
+        },
+        {
+          "sex": 2,
+          "url": "http:\/\/sikushu.org\/lishi\/",
+          "name": "历史[今日更新]"
+        },
+        {
+          "sex": 2,
+          "url": "http:\/\/sikushu.org\/wangyou\/",
+          "name": "网游[今日更新]"
+        },
+        {
+          "sex": 2,
+          "url": "http:\/\/sikushu.org\/lingyi\/",
+          "name": "灵异[今日更新]"
+        },
+        {
+          "sex": 2,
+          "url": "http:\/\/sikushu.org\/kehuan\/",
+          "name": "科幻[今日更新]"
+        },
+        {
+          "sex": 2,
+          "url": "http:\/\/sikushu.org\/tongren\/",
+          "name": "同人[今日更新]"
+        },
+        {
+          "sex": 2,
+          "url": "http:\/\/sikushu.org\/nusheng\/",
+          "name": "女生[今日更新]"
+        }
+      ],
+      "maxPageCount": "-1",
+      "nextPageForGetMedthod": true,
+      "nextPageUrl": "\/\/div[@class=\"pagelink\"]\/a[@class=\"next\"]\/@href"
+    }
+  },
+  "httpConfigs": {
+    "headers": {},
+    "customFormatValueParam": "JxdSecuritySub.Gb2312Encoded:value",
+    "useCookies": true
+  },
+  "chapterDetail": {
+    "forGetMethod": true,
+    "parser": {
+      "content": [
+        "\/\/div[@id=\"content\"]\/text()",
+        "@regex:<a .*<\/a> @=>"
+      ]
+    },
+    "params": {}
+  },
+  "weight": 1,
+  "priorityEncoding": 4,
+  "needSupportDynTask": true,
+  "sourceDetail": {
+    "forGetMethod": true,
+    "parser": {
+      "_1": {
+        "_list": "\/\/div[@id=\"list\"]\/dl\/\/dd",
+        "title": ".\/a\/text()",
+        "url": [
+          ".\/a",
+          "concat('http:\/\/www.sikushu.org',.\/@href)"
+        ]
+      },
+      "lastUpdateDate": "\/\/div[@id=\"info\"]\/p[3]"
+    },
+    "params": {}
+  },
+  "lastModifyTime": "2018-12-20 17:08:50",
+  "responseType": 0,
+  "searchBook": {
+    "nextPageParams": {},
+    "parser": {
+      "author": ".\/\/div[@class=\"ji\"]\/text()[2]",
+      "_1": {
+        "dirURL": [
+          ".\/\/div[@class=\"ji\"]\/h3\/a",
+          "concat('http:\/\/www.sikushu.org',.\/@href)"
+        ]
+      },
+      "_list": "\/\/div[@class=\"cover\"]\/\/tr[@id=\"nr\"]",
+      "bookName": ".\/\/div[@class=\"ji\"]\/h3\/a\/text()",
+      "statusText": ".\/\/div[@class=\"ji\"]\/text()[4]",
+      "coverUrl": [
+        ".\/\/td[@class=\"odd\"]\/a\/img",
+        "concat('http:\/\/www.sikushu.org',.\/@src)"
+      ],
+      "lastUpdateDate": ".\/\/div[@class=\"ji\"]\/text()[5]",
+      "typeText": [
+        ".\/\/div[@class=\"ji\"]\/text()[3]",
+        "substring-after(., \"[\")",
+        "substring-before(., \"]\")"
+      ],
+      "desc": ".\/\/div[@class=\"ji\"]\/text()[6]"
+    },
+    "forGetMethod": false,
+    "params": {
+      "s": "%@",
+      "type": "articlename"
+    },
+    "nextPageForGetMedthod": true,
+    "maxPageCount": 1,
+    "url": "http:\/\/www.sikushu.org\/user\/s.php"
+  },
+  "thinkingWord": {
+    "forGetMethod": true,
+    "parser": {
+      "_list": "",
+      "keyword": ""
+    },
+    "params": {}
+  }
+}
