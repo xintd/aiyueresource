@@ -1,0 +1,34 @@
+{
+	"homeUrl": "www.zhuishu.tw",
+	"enable": true,
+	"authorId": "cf11774b4a0cb5dd1135980f87ea2bdf",
+	"bookWorld": {},
+	"httpConfigs": {
+		"headers": {},
+		"useCookies": false
+	},
+	"weight": 3000,
+	"priorityEncoding": 4,
+	"needSupportDynTask": true,
+	"lastModifyTime": "2019-03-08 02:09:12",
+	"responseType": 4,
+	"searchBook": {
+		"forGetMethod": true,
+		"parser": {
+			"author": "div[@class=result-game-item-info].span[1]",
+			"_1": {
+				"dirURL": "div[@class=result-game-item-detail].h3.a.@href"
+			},
+			"_list": "div[@class=result-item result-game-item]",
+			"bookName": "div[@class=result-game-item-detail].h3.a.span",
+			"coverUrl": "div[@class=result-game-item-pic].img.@src",
+			"lastUpdateDate": "div[@class=result-game-item-info].p[2].span[1]",
+			"desc": "p[@class=result-game-item-desc].@text",
+			"typeText": "div[@class=result-game-item-info].p[1].span[1]"
+		},
+		"params": {},
+		"url": "https:\/\/www.bimo.cc\/search.aspx?keyword=%@",
+		"weight": "300"
+	},
+	"name": "追书网tw"
+}
