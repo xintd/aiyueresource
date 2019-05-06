@@ -1,0 +1,378 @@
+{
+	"bookWorld": {
+		"分类": {
+			"nextPageParams": {},
+			"parser": {
+				"author": "author",
+				"typeText": "@dyn:t=content.objectForKey:cat; check(t, return t); content.objectForKey:majorCate",
+				"_1": {
+					"type": "@def:1000",
+					"helpId": "_id"
+				},
+				"_list": "books",
+				"bookName": "title",
+				"retentionRatio": "retentionRatio",
+				"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/statics.zhuishushenqi.com%@', u)"],
+				"tags": "tags",
+				"desc": "shortIntro"
+			},
+			"forGetMethod": true,
+			"params": {
+				"start": "@dyn:calc(pageIndex * 20)",
+				"limit": "20",
+				"type": "reputation"
+			},
+			"nextPageForGetMedthod": true,
+			"maxPageCount": "50",
+			"urls": {
+				"forGetMethod": true,
+				"parser": {
+					"_2": {
+						"_list": "female",
+						"sex": "@def:1",
+						"_3": {
+							"_list": "mins",
+							"name": "_root",
+							"url": ["_root", "@dyn:m=parent.objectForKey:name; format('http:\/\/api.zhuishushenqi.com\/book\/by-categories?gender=female&major=%@&minor=%@', m, content)"]
+						},
+						"url": ["major", "@dyn:check(!content, return nil);\nformat('http:\/\/api.zhuishushenqi.com\/book\/by-categories?gender=female&major=%@', content)"],
+						"name": "major",
+						"_2": {
+							"name": "@def:全部",
+							"url": ["major", "@dyn:check(!content, return nil);\nformat('http:\/\/api.zhuishushenqi.com\/book\/by-categories?gender=female&major=%@', content)"]
+						}
+					},
+					"_1": {
+						"_2": {
+							"name": "@def:全部",
+							"url": ["major", "@dyn:check(!content, return nil);\nformat('http:\/\/api.zhuishushenqi.com\/book\/by-categories?gender=male&major=%@', content)"]
+						},
+						"sex": "@def:0",
+						"_3": {
+							"_list": "mins",
+							"name": "_root",
+							"url": ["_root", "@dyn:m=parent.objectForKey:name; format('http:\/\/api.zhuishushenqi.com\/book\/by-categories?gender=male&major=%@&minor=%@', m, content)"]
+						},
+						"name": "major",
+						"_list": "male",
+						"url": ["major", "@dyn:check(!content, return nil);\nformat('http:\/\/api.zhuishushenqi.com\/book\/by-categories?gender=male&major=%@', content)"]
+					}
+				},
+				"params": {},
+				"url": "http:\/\/api.zhuishushenqi.com\/cats\/lv2"
+			},
+			"weight": "1000"
+		},
+		"排行榜": {
+			"urls": {
+				"forGetMethod": true,
+				"parser": {
+					"_2": {
+						"_1": {
+							"url": ["_id", "@dyn:check(!content, return nil); format('http:\/\/api.zhuishushenqi.com\/ranking\/%@', content)"],
+							"name": "@def:周榜"
+						},
+						"sex": "@def:1",
+						"_list": "female",
+						"name": "shortTitle",
+						"_2": {
+							"name": "@def:月榜",
+							"url": ["monthRank", "@dyn:check(!content, return nil); format('http:\/\/api.zhuishushenqi.com\/ranking\/%@', content)"]
+						},
+						"_3": {
+							"name": "@def:总榜",
+							"url": ["totalRank", "@dyn:check(!content, return nil); format('http:\/\/api.zhuishushenqi.com\/ranking\/%@', content)"]
+						}
+					},
+					"_1": {
+						"_1": {
+							"name": "@def:周榜",
+							"url": ["_id", "@dyn:check(!content, return nil); format('http:\/\/api.zhuishushenqi.com\/ranking\/%@', content)"]
+						},
+						"sex": "@def:0",
+						"_list": "male",
+						"name": "shortTitle",
+						"_2": {
+							"name": "@def:月榜",
+							"url": ["monthRank", "@dyn:check(!content, return nil); format('http:\/\/api.zhuishushenqi.com\/ranking\/%@', content)"]
+						},
+						"_3": {
+							"name": "@def:总榜",
+							"url": ["totalRank", "@dyn:check(!content, return nil); format('http:\/\/api.zhuishushenqi.com\/ranking\/%@', content)"]
+						}
+					}
+				},
+				"params": {},
+				"url": "http:\/\/api.zhuishushenqi.com\/ranking\/gender"
+			},
+			"forGetMethod": true,
+			"parser": {
+				"author": "author",
+				"_1": {
+					"type": "@def:1000",
+					"helpId": "_id"
+				},
+				"_list": "ranking.books",
+				"bookName": "title",
+				"retentionRatio": "retentionRatio",
+				"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/statics.zhuishushenqi.com%@', u)"],
+				"typeText": "majorCate",
+				"desc": "shortIntro"
+			},
+			"type": 2,
+			"weight": "1000",
+			"params": {}
+		},
+		"书单-按收藏量排序": {
+			"nextPageParams": {},
+			"parser": {
+				"_1": {
+					"type": "@def:1000",
+					"helpId": ["@ex:.@href", "@regex:(?<=book\/).+?(?=$)"]
+				},
+				"author": "@ex:p[@class=author].span[0]",
+				"bookName": "@ex:h4.span",
+				"_list": "@ex:div[@class==books-list].a",
+				"coverUrl": "@ex:img[0].@src"
+			},
+			"forGetMethod": true,
+			"params": {},
+			"urls": {
+				"nextPageParams": {},
+				"parser": {
+					"_1": {
+						"_list": "@ex:div[@class=books-list].a",
+						"name": "@ex:h4[@class==name].span.@text",
+						"url": "@ex:.@href"
+					}
+				},
+				"forGetMethod": true,
+				"params": {},
+				"nextPageForGetMedthod": true,
+				"maxPageCount": "5",
+				"url": "http:\/\/www.zhuishushenqi.com\/booklist?sort=collection&type=all&tag=all",
+				"nextPageUrl": "@ex:div[@class=c-full-page].a[@text=下一页].@href"
+			},
+			"maxPageCount": "0",
+			"nextPageForGetMedthod": true,
+			"nextPageUrl": "@ex:div[@class=c-full-page].a[@text=下一页].@href"
+		},
+		"精选": {
+			"forGetMethod": true,
+			"parser": {
+				"author": "@ex:p[@class=author].span[0]",
+				"_1": {
+					"type": "@def:1000",
+					"helpId": ["@ex:.@href", "@regex:(?<=book\/).+?(?=$)"]
+				},
+				"_list": "@ex:div[@class=books-list].a",
+				"bookName": "@ex:h4.span[0]",
+				"statusText": "@ex:*[@class==tag]",
+				"retentionRatio": "@ex:*[@class==c-red][1]",
+				"coverUrl": "@ex:img[0].@src",
+				"desc": "@ex:*[@class==desc]",
+				"typeText": "@ex:*[@class==cat]"
+			},
+			"params": {},
+			"urls": {
+				"forGetMethod": true,
+				"parser": {
+					"_1": {
+						"_list": "@ex:div[@class=c-full-sideBar].a",
+						"name": "@ex:span.@text",
+						"url": "@ex:.@href"
+					}
+				},
+				"params": {},
+				"url": "http:\/\/www.zhuishushenqi.com\/selection\/bzrt"
+			}
+		},
+		"书单-按发布时间排序": {
+			"nextPageParams": {},
+			"parser": {
+				"_1": {
+					"type": "@def:1000",
+					"helpId": ["@ex:.@href", "@regex:(?<=book\/).+?(?=$)"]
+				},
+				"author": "@ex:p[@class=author].span[0]",
+				"bookName": "@ex:h4.span",
+				"_list": "@ex:div[@class==books-list].a",
+				"coverUrl": "@ex:img[0].@src"
+			},
+			"forGetMethod": true,
+			"params": {},
+			"urls": {
+				"nextPageParams": {},
+				"parser": {
+					"_1": {
+						"_list": "@ex:div[@class=books-list].a",
+						"name": "@ex:h4[@class==name].span.@text",
+						"url": "@ex:.@href"
+					}
+				},
+				"forGetMethod": true,
+				"params": {},
+				"nextPageForGetMedthod": true,
+				"maxPageCount": "3",
+				"nextPageUrl": "@ex:div[@class=c-full-page].a[@text=下一页].@href",
+				"url": "http:\/\/www.zhuishushenqi.com\/booklist?sort=new&type=all&tag=all"
+			},
+			"maxPageCount": "0",
+			"nextPageForGetMedthod": true,
+			"nextPageUrl": "@ex:div[@class=c-full-page].a[@text=下一页].@href"
+		},
+		"书单-本周最热": {
+			"nextPageParams": {},
+			"parser": {
+				"_1": {
+					"type": "@def:1000",
+					"helpId": ["@ex:.@href", "@regex:(?<=book\/).+?(?=$)"]
+				},
+				"author": "@ex:p[@class=author].span[0]",
+				"bookName": "@ex:h4.span",
+				"_list": "@ex:div[@class==books-list].a",
+				"coverUrl": "@ex:img[0].@src"
+			},
+			"forGetMethod": true,
+			"params": {},
+			"urls": {
+				"nextPageParams": {},
+				"parser": {
+					"_1": {
+						"_list": "@ex:div[@class=books-list].a",
+						"name": "@ex:h4[@class==name].span.@text",
+						"url": "@ex:.@href"
+					}
+				},
+				"forGetMethod": true,
+				"params": {},
+				"nextPageForGetMedthod": true,
+				"maxPageCount": "3",
+				"url": "http:\/\/www.zhuishushenqi.com\/booklist?sort=hot&type=all&tag=all",
+				"nextPageUrl": "@ex:div[@class=c-full-page].a[@text=下一页].@href"
+			},
+			"maxPageCount": "0",
+			"nextPageForGetMedthod": true,
+			"nextPageUrl": "@ex:div[@class=c-full-page].a[@text=下一页].@href"
+		}
+	},
+	"weight": 1000,
+	"needSupportDynTask": false,
+	"tryCount": 0,
+	"searchSource": {
+		"weight": "1000",
+		"multi": true,
+		"parser": {
+			"helpId": "_id",
+			"dirURL": "link",
+			"webName": ["name", "@dyn:\nb = content.containsString:biquge;\ncheck(b, return format('追书神器_%@',content));\n\nb = content.containsString:176;\ncheck(b, return format('追书神器_%@',content));\n\nb = content.containsString:716;\ncheck(b, return format('追书神器_%@',content));\n\nreturn nil;"],
+			"_list": "_root",
+			"lastChapterTitle": "lastChapter",
+			"chaptersCount": "chaptersCount",
+			"type": "@def:1001",
+			"index": ["name", "@regex:176小说 @=>1000", "@regex:xbiquge @=>1000"]
+		},
+		"url": "@dyn:u=source.helpId;check(!u, return nil);format('http:\/\/api.zhuishushenqi.com\/toc?view=summary&book=%@', u)",
+		"forGetMethod": true,
+		"params": {}
+	},
+	"responseType": 0,
+	"authorInfo": "",
+	"enable": true,
+	"name": "追书神器",
+	"chapterDetail": {
+		"priorityEncoding": 4,
+		"forGetMethod": true,
+		"parser": {
+			"content": ["chapter", "@dyn:vp=content.objectForKey:isVip; check(vp == 1, return nil); cp=content.objectForKey:cpContent; check(cp, return cp); return content.objectForKey:body"]
+		},
+		"params": {},
+		"url": "@dyn:u=chapter.url; check(!u, return nil); bu=JxdSecuritySub.Utf8Encoded:u; idx=JxdRandom.RandomWithMin:1 max:100; format('http:\/\/chapter%@.zhuishushenqi.com\/chapter\/%@',idx, bu);",
+		"weight": "1000"
+	},
+	"bookWorldGroupName": "",
+	"priorityEncoding": 4,
+	"thinkingWord": {
+		"forGetMethod": true,
+		"parser": {
+			"_list": "keywords",
+			"keyword": "_root"
+		},
+		"params": {},
+		"url": "http:\/\/api.zhuishushenqi.com\/book\/auto-complete?query=%@",
+		"weight": "1000"
+	},
+	"lastModifyTime": "2019-05-02 10:15:41",
+	"homeUrl": "http:\/\/api.zhuishushenqi.com\/",
+	"searchBook": {
+		"weight": "1000",
+		"parser": {
+			"author": "author",
+			"_1": {
+				"type": "@def:1000",
+				"helpId": "_id"
+			},
+			"wordCount": "wordCount",
+			"_list": "books",
+			"bookName": "title",
+			"retentionRatio": ["retentionRatio", "@dyn:format(\"%@%\", content)"],
+			"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/statics.zhuishushenqi.com%@', u)"],
+			"desc": "shortIntro",
+			"typeText": "@dyn:t=content.objectForKey:cat; check(t, return t); content.objectForKey:majorCate"
+		},
+		"forGetMethod": 1,
+		"params": {
+			"start": "0",
+			"query": "%@",
+			"v": "1",
+			"limit": "20"
+		},
+		"nextPageForGetMedthod": 1,
+		"maxPageCount": "10",
+		"nextPageParams": {
+			"start": "@dyn:calc(20 * pageIndex)",
+			"limit": "50",
+			"query": "%@"
+		},
+		"nextPageUrl": ["@json:total", "@dyn:n=calc(content \/ 20);\ncheck(n > pageIndex, return self.url);\nreturn nil"],
+		"url": "http:\/\/api.zhuishushenqi.com\/book\/fuzzy-search"
+	},
+	"httpConfigs": {
+		"headers": {},
+		"httpCreateCode": "",
+		"useCookies": true
+	},
+	"password": "",
+	"authorId": "6d2370e2088b9556423c257fd3f8c5dd",
+	"sourceDetail": {
+		"forGetMethod": true,
+		"parser": {
+			"webName": ["name", "@dyn:check(!content, return nil); return format('%@_书',content)"],
+			"lastUpdateDate": "mixToc.chaptersUpdated || updated",
+			"_1": {
+				"_list": "mixToc.chapters || chapters",
+				"title": "title",
+				"url": "link"
+			}
+		},
+		"params": {},
+		"url": "@dyn:d=source.helpId; check(!d, return nil);nType=source.type;check(nType==1000, return format('http:\/\/api.zhuishushenqi.com\/mix-toc\/%@', d)); check(nType==1001, return format('http:\/\/api.zhuishushenqi.com\/toc\/%@?view=chapters', d));return nil",
+		"weight": "1000"
+	},
+	"bookDetail": {
+		"forGetMethod": true,
+		"parser": {
+			"tags": "tags",
+			"wordCount": "wordCount",
+			"statusText": ["isSerial", "@dyn:c=ContentFormat.ToSingleText:content;check(c==1, return 连载); return 完本"],
+			"retentionRatio": "retentionRatio",
+			"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/statics.zhuishushenqi.com%@', u)"],
+			"lastUpdateDate": "updated",
+			"typeText": "cat",
+			"desc": "longIntro"
+		},
+		"params": {},
+		"url": "@dyn:u=source.helpId; check(!u, return nil); format('http:\/\/api.zhuishushenqi.com\/book\/%@', u)",
+		"weight": "1000"
+	}
+}
