@@ -1,0 +1,396 @@
+[{
+		"rule": "\\\/ @=>",
+		"enable": true,
+		"summary": "\/"
+	}, {
+		"rule": "(?<!\\d)6(?=[地离续])|(?<=[大着内])6 @=>陆",
+		"enable": true,
+		"summary": "6->陆"
+	}, {
+		"rule": "chou(?=[天风雨季雷])|chou(?=[如]) @=>春",
+		"enable": true,
+		"summary": "chou->春"
+	}, {
+		"rule": "(?<=[空漏])dong @=>洞",
+		"enable": true,
+		"summary": "dong->洞"
+	}, {
+		"rule": "(?<=[心浪水])hua|hua(?=[样式开椒招]) @=>花",
+		"enable": true,
+		"summary": "hua->花"
+	}, {
+		"rule": "(?<=[精灵])hun|hun(?=魄) @=>魂",
+		"enable": true,
+		"summary": "hun->魂"
+	}, {
+		"rule": "(?<=[迷困疑蛊所])huo @=>惑",
+		"enable": true,
+		"summary": "huo->惑"
+	}, {
+		"rule": "mén @=>门",
+		"enable": true,
+		"summary": "mén->门"
+	}, {
+		"rule": "(?<=[真])zhèng @=>正",
+		"enable": true,
+		"summary": "zhèng->正"
+	}, {
+		"rule": "(?<=[求帮])zhù @=>助",
+		"enable": true,
+		"summary": "zhù->助"
+	}, {
+		"rule": "cha(?=[槽头座队]) @=>插",
+		"enable": true,
+		"summary": "cha->插"
+	}, {
+		"rule": "(?<=[空晃]|dang)dang @=>荡",
+		"enable": true,
+		"summary": "dang->荡"
+	}, {
+		"rule": "(?<=[震振])dang @=>动",
+		"enable": true,
+		"summary": "dang->动"
+	}, {
+		"rule": "(?<=[感冲刺过])ji|ji(?=[动烈进昂战发怒增将化荡活情励]) @=>激",
+		"enable": true,
+		"summary": "ji->激"
+	}, {
+		"rule": "(jīng|jing|\\*)(?=[力神灵怪魄确魂气血锐]) @=>精",
+		"enable": true,
+		"summary": "jīng->精"
+	}, {
+		"rule": "jiao(?=[流给待火]) @=>交",
+		"enable": true,
+		"summary": "jiao->交"
+	}, {
+		"rule": "jianyin @=>奸淫",
+		"enable": true,
+		"summary": "jianyin->奸淫"
+	}, {
+		"rule": "(?<=赤)luo|luo(?=[露睡体奔]) @=>祼",
+		"enable": true,
+		"summary": "luo->祼"
+	}, {
+		"rule": "(?<=[捉玩摆])n[oò]ng|n[oò]ng(?=[虚手臣明点权]) @=>弄",
+		"enable": true,
+		"summary": "nòng->弄"
+	}, {
+		"rule": "nv(?=[人孩子士儿子官装帝王奴])|(?<=[一男儿淑美少])nv @=>女",
+		"enable": true,
+		"summary": "nv->女"
+	}, {
+		"rule": "sao(?=[动气乱扰气客话])|(?<=[发牢风])sao @=>骚",
+		"enable": true,
+		"summary": "sao->骚"
+	}, {
+		"rule": "sè @=>色",
+		"enable": true,
+		"summary": "sè->色"
+	}, {
+		"rule": "(?<=[弹发暗影注喷反辐放])shè|shè(?=[箭日击程手]) @=>射",
+		"enable": true,
+		"summary": "shè->射"
+	}, {
+		"rule": "(?<=[大小])tui|tui(?=[部上软]) @=>腿",
+		"enable": true,
+		"summary": "tui->腿"
+	}, {
+		"rule": "(?<=[属血人能攻害征死])xing|xing(?=[情能格致质]) @=>性",
+		"enable": true,
+		"summary": "xing->性"
+	}, {
+		"rule": "(?<=白日宣|奇)yin|yin(?=[邪僧贼]) @=>淫",
+		"enable": true,
+		"summary": "yin->淫"
+	}, {
+		"rule": "(?<=[太光遮])y[iī]n|y[iī]n(?=[沉阳历霾暗干面凉影谋毒险湿天魂文晦冷骘]) @=>阴",
+		"enable": true,
+		"summary": "yin->阴"
+	}, {
+		"rule": "(?<=[之九]|十有)\\*\\*|\\*\\*(?=[岁年月日周天个米丈里层成熟点]|不离十) @=>八九",
+		"enable": true,
+		"summary": "**->八九"
+	}, {
+		"rule": "\\*\\*(?=[纵控]) @=>被操",
+		"enable": true,
+		"summary": "**->被操"
+	}, {
+		"rule": "(?<=[帝俄法])\\*\\*|\\*\\*(?=[队务需人]) @=>国军",
+		"enable": true,
+		"summary": "**->国军"
+	}, {
+		"rule": "巨\\* @=>巨大",
+		"enable": true,
+		"summary": "巨*->巨大"
+	}, {
+		"rule": "\\*\\*(?=裸) @=>赤裸",
+		"enable": true,
+		"summary": "**->赤裸"
+	}, {
+		"rule": "(?<=[头匹])\\*\\*\\* @=>草泥马",
+		"enable": true,
+		"summary": "***->草泥马"
+	}, {
+		"rule": "变\\\/态 @=>变态",
+		"enable": true,
+		"summary": "变态"
+	}, {
+		"rule": "\\&nbsp @=>",
+		"enable": true,
+		"summary": "nbsp"
+	}, {
+		"rule": "\\*{2}丝 @=>屌丝",
+		"enable": true,
+		"summary": "**丝"
+	}, {
+		"rule": "yin奉阳违 @=>阴奉阳违",
+		"enable": true
+	}, {
+		"rule": "[wｗＷ]{1,3}[．\\\\.]２３ｕＳ[．\\\\.](?:ｃｏＭ|com) @=>",
+		"enable": true,
+		"summary": "通用去广告"
+	}, {
+		"rule": "十有(\\\\*{2}) @=>十有八九",
+		"enable": true
+	}, {
+		"rule": "(\\\\*{2})不离十 @=>八九不离十",
+		"enable": true
+	}, {
+		"rule": "(\\\\*{2})点 @=>八九点",
+		"enable": true
+	}, {
+		"rule": "(\\\\*{2})个 @=>八九个",
+		"enable": true
+	}, {
+		"rule": "(\\\\*{2})岁 @=>八九岁",
+		"enable": true
+	}, {
+		"rule": "(\\\\*{2})成 @=>八九成",
+		"enable": true
+	}, {
+		"rule": "(\\\\*{2})年 @=>八九年",
+		"enable": true
+	}, {
+		"rule": "一八(\\\\*{2}) @=>一八八九",
+		"enable": true
+	}, {
+		"rule": "G(\\\\*{2}) @=>GSM",
+		"enable": true
+	}, {
+		"rule": "感(\\\\*{2})彩 @=> 感情色彩",
+		"enable": true
+	}, {
+		"rule": "感(\\*{2})彩 @=>感情色彩",
+		"enable": true
+	}, {
+		"rule": "强(\\*{2})u5B9D @=>强大法宝",
+		"enable": true
+	}, {
+		"rule": "强(\\*{2})宝 @=>强大法宝",
+		"enable": true
+	}, {
+		"rule": "种魔(\\*{2}) @=>种魔大法",
+		"enable": true
+	}, {
+		"rule": "巨(\\*{2}) @=>巨大法",
+		"enable": true
+	}, {
+		"rule": "强(\\*{2})术 @=>强大法术",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})师 @=>大法师",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})凡胎 @=>肉体凡胎",
+		"enable": true
+	}, {
+		"rule": "夺取她的(\\*{2}) @=>夺取她的肉体",
+		"enable": true
+	}, {
+		"rule": "夺取他的(\\*{2}) @=>夺取他的肉体",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})与精神 @=>肉体与精神",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})素材 @=>肉体素材",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})材料 @=>肉体材料",
+		"enable": true
+	}, {
+		"rule": "在(\\*{2})上 @=>在肉体上",
+		"enable": true
+	}, {
+		"rule": "(\\*{4})着 @=>赤裸着",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})裸 @=>赤裸裸",
+		"enable": true
+	}, {
+		"rule": "浑身(\\*{2}) @=>浑身赤裸",
+		"enable": true
+	}, {
+		"rule": "枪(\\*{4}) @=>枪发射",
+		"enable": true
+	}, {
+		"rule": "(\\*{4})而出 @=>喷射而出",
+		"enable": true
+	}, {
+		"rule": "光(\\*{2}) @=>光四射",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})之欢 @=>鱼水之欢",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})队 @=>国军队",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})舰 @=>国军舰",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})方 @=>国军方",
+		"enable": true
+	}, {
+		"rule": "暴(\\*{2})谋 @=>暴露阴谋",
+		"enable": true
+	}, {
+		"rule": "的(\\*{2})是无止境的 @=>的欲望是无止境的",
+		"enable": true
+	}, {
+		"rule": "邪恶的(\\*{2}) @=>邪恶的欲望",
+		"enable": true
+	}, {
+		"rule": "被(\\*{2})支配 @=>被欲望支配",
+		"enable": true
+	}, {
+		"rule": "掀桌的(\\*{2}) @=>掀桌的欲望",
+		"enable": true
+	}, {
+		"rule": "控制不住(\\*{2}) @=>控制不住欲望",
+		"enable": true
+	}, {
+		"rule": "求生的(\\*{2}) @=>求生的欲望",
+		"enable": true
+	}, {
+		"rule": "求生(\\*{2}) @=>求生欲望",
+		"enable": true
+	}, {
+		"rule": "购买(\\*{2}) @=>购买欲望",
+		"enable": true
+	}, {
+		"rule": "永无止境的(\\*{2}) @=>永无止境的欲望",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})的发泄 @=>欲望的发泄",
+		"enable": true
+	}, {
+		"rule": "发泄(\\*{2}) @=>发泄欲望",
+		"enable": true
+	}, {
+		"rule": "杀戮(\\*{2}) @=>杀戮欲望",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})和本能 @=>欲望和本能",
+		"enable": true
+	}, {
+		"rule": "不堪重负的(\\*{2}) @=>不堪重负的呻吟",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})声 @=>呻吟声",
+		"enable": true
+	}, {
+		"rule": "颤抖(\\*{2}) @=>颤抖呻吟",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})颤抖 @=>呻吟颤抖",
+		"enable": true
+	}, {
+		"rule": "宣布(\\*{2}) @=>宣布独立",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})空间 @=>独立空间",
+		"enable": true
+	}, {
+		"rule": "波纹(\\*{2}) @=>波纹荡漾",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})之机 @=>喘息之机",
+		"enable": true
+	}, {
+		"rule": "一(\\*{2}) @=>一大波",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})奉 @=>上供奉",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})掳掠 @=>奸淫掳掠",
+		"enable": true
+	}, {
+		"rule": "有(\\*{2})份 @=>有失身份",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})八荒 @=>六合八荒",
+		"enable": true
+	}, {
+		"rule": "天灾(\\*{2}) @=>天灾人祸",
+		"enable": true
+	}, {
+		"rule": "一(\\*{2})日 @=>一轮红日",
+		"enable": true
+	}, {
+		"rule": "东躲(\\*{2}) @=>东躲西藏",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})纵 @=>被操纵",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})丝 @=>穷屌丝",
+		"enable": true
+	}, {
+		"rule": "(\\*{2})滋味 @=>销魂滋味",
+		"enable": true
+	}, {
+		"rule": "血(\\*{2})晶 @=>血色水晶",
+		"enable": true
+	}, {
+		"rule": "偷(\\*{2}) @=>偷偷用",
+		"enable": true
+	}, {
+		"rule": "水(\\*{2})融 @=>水乳交融",
+		"enable": true
+	}, {
+		"rule": "cao之过急 @=>操之过急",
+		"enable": true
+	}, {
+		"rule": "chunguang大泄 @=>春光大泄",
+		"enable": true
+	}, {
+		"rule": "大公无si @=>大公无私",
+		"enable": true
+	}, {
+		"rule": "放sōng'xià来 @=>放松下来",
+		"enable": true
+	}, {
+		"rule": "奸yin掳掠 @=>奸淫掳掠",
+		"enable": true
+	}, {
+		"rule": "空dangdang @=>空荡荡",
+		"enable": true
+	}, {
+		"rule": "突发qing况 @=>突发情况",
+		"enable": true
+	}, {
+		"rule": "yin奉阳违 @=>阴奉阳违",
+		"enable": true
+	}, {
+		"rule": "一yin一阳 @=>一阴一阳",
+		"enable": true
+	}, {
+		"rule": "fu道人家 @=>妇道人家",
+		"enable": true
+	}, {
+		"rule": "请到 WwW,69zw,com 六*九*中*文*阅读最新章节 @=>",
+		"enable": true
+	}
+]
