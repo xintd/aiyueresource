@@ -390,10 +390,7 @@
 		"rule": "fu道人家 @=>妇道人家",
 		"enable": true
 	}, {
-		"rule": "请到 WwW,69zw,com 六*九*中*文*阅读最新章节 @=>",
-		"enable": true
-	}, {
-		"rule": "您可以在*.搜索*.最新章节 @=>",
+		"rule": "(请|您).*最新章节.* @=>",
 		"enable": true
 	}
 ]
