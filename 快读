@@ -12,11 +12,12 @@
 			"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/img22.ixdzs.com\/%@', u)"],
 			"lastUpdateDate": "updated",
 			"typeText": "cat",
-			"desc": "longIntro"
+			"desc": "longIntro",
+			"index": ["name", "@regex:ixdzs @=>1000"]
 		},
 		"params": {},
 		"url": "@dyn:hid=source.helpId;format('http:\/\/api.ixdzs.com\/book\/%@', hid);",
-		"weight": "860"
+		"weight": "1000"
 	},
 	"responseType": 0,
 	"authorInfo": "",
