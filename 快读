@@ -3,17 +3,17 @@
 	"weight": 14,
 	"needSupportDynTask": false,
 	"searchSource": {
-		"weight": "1000",
+		"weight": "14",
 		"multi": true,
 		"parser": {
 			"helpId": "_id",
 			"dirURL": "link",
-			"webName": ["name", "@dyn:\nb = content.containsString:biquge;\ncheck(b, return format('追书神器_%@',content));\n\nb = content.containsString:176;\ncheck(b, return format('追书神器_%@',content));\n\nb = content.containsString:716;\ncheck(b, return format('追书神器_%@',content));\n\nreturn nil;"],
+			"webName": ["name", "@dyn:\nb = content.containsString:biquge;\ncheck(b, return format('%@',content));\n\nb = content.containsString:176;\ncheck(b, return format('%@',content));\n\nb = content.containsString:716;\ncheck(b, return format('%@',content));\n\nreturn nil;"],
 			"_list": "_root",
 			"lastChapterTitle": "lastChapter",
 			"chaptersCount": "chaptersCount",
 			"type": "@def:1001",
-			"index": ["name", "@regex:176小说 @=>1000", "@regex:xbiquge @=>1000"]
+			"index": ["name", "@regex:176小说 @=>14", "@regex:xbiquge @=>14"]
 		},
 		"url": "@dyn:u=source.helpId;check(!u, return nil);format('http:\/\/api.zhuishushenqi.com\/toc?view=summary&book=%@', u)",
 		"forGetMethod": true,
