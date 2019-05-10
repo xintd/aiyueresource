@@ -4,6 +4,7 @@
 	"needSupportDynTask": false,
 	"searchSource": {
 		"forGetMethod": true,
+		"multi": true,
 		"parser": {
 			"author": "author",
 			"wordCount": "wordCount",
