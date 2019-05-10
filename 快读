@@ -1,9 +1,9 @@
 {
 	"bookWorld": {},
-	"weight": 14,
+	"weight": 100,
 	"needSupportDynTask": false,
 	"searchSource": {
-		"weight": "14",
+		"weight": "100",
 		"multi": true,
 		"parser": {
 			"helpId": "_id",
@@ -13,7 +13,7 @@
 			"lastChapterTitle": "lastChapter",
 			"chaptersCount": "chaptersCount",
 			"type": "@def:1001",
-			"index": ["name", "@regex:176小说 @=>14", "@regex:xbiquge @=>14"]
+			"index": ["name", "@regex:176小说 @=>100", "@regex:xbiquge @=>100"]
 		},
 		"url": "@dyn:u=source.helpId;check(!u, return nil);format('http:\/\/api.zhuishushenqi.com\/toc?view=summary&book=%@', u)",
 		"forGetMethod": true,
