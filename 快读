@@ -61,7 +61,7 @@
 				"params": {},
 				"url": "http:\/\/api.zhuishushenqi.com\/cats\/lv2"
 			},
-			"weight": "1000"
+			"weight": "100"
 		},
 		"排行榜": {
 			"urls": {
@@ -120,7 +120,7 @@
 				"desc": "shortIntro"
 			},
 			"type": 2,
-			"weight": "1000",
+			"weight": "100",
 			"params": {}
 		},
 		"书单-按收藏量排序": {
@@ -256,8 +256,9 @@
 			"nextPageUrl": "@ex:div[@class=c-full-page].a[@text=下一页].@href"
 		}
 	},
-	"weight": 1002,
+	"weight": 100,
 	"needSupportDynTask": false,
+	"tryCount": 0,
 	"searchSource": {
 		"forGetMethod": true,
 		"parser": {
@@ -279,7 +280,7 @@
 		},
 		"params": {},
 		"url": "@dyn:u=chapter.url; check(!u, return nil); bu=JxdSecuritySub.Utf8Encoded:u; format('http:\/\/chapter.gdugm.cn\/chapter\/%@',bu);",
-		"weight": "1001"
+		"weight": "100"
 	},
 	"bookWorldGroupName": "",
 	"priorityEncoding": 4,
@@ -291,10 +292,10 @@
 		},
 		"params": {}
 	},
-	"lastModifyTime": "2019-01-22 21:24:02",
+	"lastModifyTime": "2019-04-18 18:52:03",
 	"homeUrl": "http:\/\/api.gdugm.cn",
 	"searchBook": {
-		"weight": "1001",
+		"weight": "100",
 		"parser": {
 			"author": "author",
 			"_1": {
@@ -322,8 +323,8 @@
 			"limit": "50",
 			"key": "%@"
 		},
-		"nextPageUrl": ["@json:total", "@dyn:n=calc(content \/ 20);\ncheck(n > pageIndex, return self.url);\nreturn nil"],
-		"url": "http:\/\/api.gdugm.cn\/book\/search"
+		"url": "http:\/\/api.gdugm.cn\/book\/search",
+		"nextPageUrl": ["@json:total", "@dyn:n=calc(content \/ 20);\ncheck(n > pageIndex, return self.url);\nreturn nil"]
 	},
 	"httpConfigs": {
 		"headers": {},
@@ -336,31 +337,31 @@
 		"forGetMethod": true,
 		"parser": {
 			"webName": ["name", "@dyn:check(!content, return nil); return format('%@_书',content)"],
+			"lastUpdateDate": "mixToc.chaptersUpdated || updated",
 			"_1": {
 				"_list": "mixToc.chapters || chapters",
 				"title": "title",
 				"url": "link"
-			},
-			"lastUpdateDate": "mixToc.chaptersUpdated || updated"
+			}
 		},
 		"params": {},
 		"url": "@dyn:d=source.helpId; check(!d, return nil);nType=source.type;check(nType==1000, return format('http:\/\/api.gdugm.cn\/toc\/mix?bookId=%@', d)); check(nType==1001, return format('http:\/\/api.gdugm.cn\/toc\/%@?view=chapters', d));return nil",
-		"weight": "1000"
+		"weight": "100"
 	},
 	"bookDetail": {
 		"forGetMethod": true,
 		"parser": {
-			"desc": "longIntro",
+			"typeText": "cat",
 			"wordCount": "wordCount",
 			"statusText": ["isSerial", "@dyn:c=ContentFormat.ToSingleText:content;check(c==1, return 连载); return 完本"],
 			"retentionRatio": "retentionRatio",
 			"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/statics.zhuishushenqi.com%@', u)"],
 			"lastUpdateDate": "updated",
-			"tags": "tags",
-			"typeText": "cat"
+			"desc": "longIntro",
+			"tags": "tags"
 		},
 		"params": {},
 		"url": "@dyn:u=source.helpId; check(!u, return nil); format('http:\/\/api.gdugm.cn\/book\/info?&bookId=%@', u)",
-		"weight": "1000"
+		"weight": "100"
 	}
 }
