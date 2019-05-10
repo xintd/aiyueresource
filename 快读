@@ -3,22 +3,21 @@
 	"weight": 14,
 	"needSupportDynTask": false,
 	"searchSource": {
-		"forGetMethod": true,
+		"weight": "1000",
 		"multi": true,
 		"parser": {
-			"author": "author",
-			"wordCount": "wordCount",
-			"bookName": "title",
-			"statusText": "zt",
-			"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/img22.ixdzs.com\/%@', u)"],
-			"lastUpdateDate": "updated",
-			"typeText": "cat",
-			"desc": "longIntro",
-			"index": ["name", "@regex:ixdzs @=>1000"]
+			"helpId": "_id",
+			"dirURL": "link",
+			"webName": ["name", "@dyn:\nb = content.containsString:biquge;\ncheck(b, return format('追书神器_%@',content));\n\nb = content.containsString:176;\ncheck(b, return format('追书神器_%@',content));\n\nb = content.containsString:716;\ncheck(b, return format('追书神器_%@',content));\n\nreturn nil;"],
+			"_list": "_root",
+			"lastChapterTitle": "lastChapter",
+			"chaptersCount": "chaptersCount",
+			"type": "@def:1001",
+			"index": ["name", "@regex:176小说 @=>1000", "@regex:xbiquge @=>1000"]
 		},
-		"params": {},
-		"url": "@dyn:hid=source.helpId;format('http:\/\/api.ixdzs.com\/book\/%@', hid);",
-		"weight": "1000"
+		"url": "@dyn:u=source.helpId;check(!u, return nil);format('http:\/\/api.zhuishushenqi.com\/toc?view=summary&book=%@', u)",
+		"forGetMethod": true,
+		"params": {}
 	},
 	"responseType": 0,
 	"authorInfo": "",
