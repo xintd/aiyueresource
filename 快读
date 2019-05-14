@@ -258,7 +258,6 @@
 	},
 	"weight": 100,
 	"needSupportDynTask": false,
-	"tryCount": 0,
 	"searchSource": {
 		"forGetMethod": true,
 		"parser": {
@@ -273,14 +272,17 @@
 	"enable": true,
 	"name": "快读",
 	"chapterDetail": {
-		"priorityEncoding": 4,
-		"forGetMethod": true,
 		"parser": {
 			"content": ["chapter", "@dyn:vp=content.objectForKey:isVip; check(vp == 1, return nil); cp=content.objectForKey:cpContent; check(cp, return cp); return content.objectForKey:body"]
 		},
 		"params": {},
-		"url": "@dyn:u=chapter.url; check(!u, return nil); bu=JxdSecuritySub.Utf8Encoded:u; format('http:\/\/chapter.gdugm.cn\/chapter\/%@',bu);",
-		"weight": "100"
+		"forGetMethod": true,
+		"nextPageForGetMedthod": true,
+		"weight": "100",
+		"maxPageCount": 1,
+		"nextPageParams": {},
+		"priorityEncoding": 4,
+		"url": "@dyn:u=chapter.url; check(!u, return nil); bu=JxdSecuritySub.Utf8Encoded:u; format('http:\/\/chapter.gdugm.cn\/chapter\/%@',bu);"
 	},
 	"bookWorldGroupName": "",
 	"priorityEncoding": 4,
@@ -292,7 +294,7 @@
 		},
 		"params": {}
 	},
-	"lastModifyTime": "2019-04-18 18:52:03",
+	"lastModifyTime": "2019-01-22 21:28:37",
 	"homeUrl": "http:\/\/api.gdugm.cn",
 	"searchBook": {
 		"weight": "100",
@@ -323,8 +325,8 @@
 			"limit": "50",
 			"key": "%@"
 		},
-		"url": "http:\/\/api.gdugm.cn\/book\/search",
-		"nextPageUrl": ["@json:total", "@dyn:n=calc(content \/ 20);\ncheck(n > pageIndex, return self.url);\nreturn nil"]
+		"nextPageUrl": ["@json:total", "@dyn:n=calc(content \/ 20);\ncheck(n > pageIndex, return self.url);\nreturn nil"],
+		"url": "http:\/\/api.gdugm.cn\/book\/search"
 	},
 	"httpConfigs": {
 		"headers": {},
@@ -334,7 +336,6 @@
 	"password": "",
 	"authorId": "",
 	"sourceDetail": {
-		"forGetMethod": true,
 		"parser": {
 			"webName": ["name", "@dyn:check(!content, return nil); return format('%@_书',content)"],
 			"lastUpdateDate": "mixToc.chaptersUpdated || updated",
@@ -345,20 +346,24 @@
 			}
 		},
 		"params": {},
-		"url": "@dyn:d=source.helpId; check(!d, return nil);nType=source.type;check(nType==1000, return format('http:\/\/api.gdugm.cn\/toc\/mix?bookId=%@', d)); check(nType==1001, return format('http:\/\/api.gdugm.cn\/toc\/%@?view=chapters', d));return nil",
-		"weight": "100"
+		"forGetMethod": true,
+		"nextPageForGetMedthod": true,
+		"weight": "100",
+		"maxPageCount": 1,
+		"nextPageParams": {},
+		"url": "@dyn:d=source.helpId; check(!d, return nil);nType=source.type;check(nType==1000, return format('http:\/\/api.gdugm.cn\/toc\/mix?bookId=%@', d)); check(nType==1001, return format('http:\/\/api.gdugm.cn\/toc\/%@?view=chapters', d));return nil"
 	},
 	"bookDetail": {
 		"forGetMethod": true,
 		"parser": {
-			"typeText": "cat",
+			"desc": "longIntro",
 			"wordCount": "wordCount",
 			"statusText": ["isSerial", "@dyn:c=ContentFormat.ToSingleText:content;check(c==1, return 连载); return 完本"],
 			"retentionRatio": "retentionRatio",
-			"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/api.gdugm.cn\/book\/info?&bookId=%@', u)"],
+			"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/statics.zhuishushenqi.com%@', u)"],
 			"lastUpdateDate": "updated",
-			"desc": "longIntro",
-			"tags": "tags"
+			"tags": "tags",
+			"typeText": "cat"
 		},
 		"params": {},
 		"url": "@dyn:u=source.helpId; check(!u, return nil); format('http:\/\/api.gdugm.cn\/book\/info?&bookId=%@', u)",
