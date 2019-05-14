@@ -360,7 +360,7 @@
 			"wordCount": "wordCount",
 			"statusText": ["isSerial", "@dyn:c=ContentFormat.ToSingleText:content;check(c==1, return 连载); return 完本"],
 			"retentionRatio": "retentionRatio",
-			"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('http:\/\/statics.zhuishushenqi.com%@', u)"],
+			"coverUrl": ["cover", "@dyn:u=ContentFormat.ToSingleText:content;check(!u, return nil); format('%@', u)"],
 			"lastUpdateDate": "updated",
 			"tags": "tags",
 			"typeText": "cat"
