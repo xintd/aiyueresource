@@ -60,8 +60,7 @@
 				},
 				"params": {},
 				"url": "http:\/\/api.zhuishushenqi.com\/cats\/lv2"
-			},
-			"weight": "100"
+			}
 		},
 		"排行榜": {
 			"urls": {
@@ -120,7 +119,6 @@
 				"desc": "shortIntro"
 			},
 			"type": 2,
-			"weight": "100",
 			"params": {}
 		},
 		"书单-按收藏量排序": {
@@ -278,7 +276,6 @@
 		"params": {},
 		"forGetMethod": true,
 		"nextPageForGetMedthod": true,
-		"weight": "100",
 		"maxPageCount": 1,
 		"nextPageParams": {},
 		"priorityEncoding": 4,
@@ -297,7 +294,6 @@
 	"lastModifyTime": "2019-01-22 21:28:37",
 	"homeUrl": "http:\/\/api.gdugm.cn",
 	"searchBook": {
-		"weight": "100",
 		"parser": {
 			"author": "author",
 			"_1": {
@@ -348,7 +344,6 @@
 		"params": {},
 		"forGetMethod": true,
 		"nextPageForGetMedthod": true,
-		"weight": "100",
 		"maxPageCount": 1,
 		"nextPageParams": {},
 		"url": "@dyn:d=source.helpId; check(!d, return nil);nType=source.type;check(nType==1000, return format('http:\/\/api.gdugm.cn\/toc\/mix?bookId=%@', d)); check(nType==1001, return format('http:\/\/api.gdugm.cn\/toc\/%@?view=chapters', d));return nil"
@@ -366,7 +361,6 @@
 			"typeText": "cat"
 		},
 		"params": {},
-		"url": "@dyn:u=source.helpId; check(!u, return nil); format('http:\/\/api.gdugm.cn\/book\/info?&bookId=%@', u)",
-		"weight": "100"
+		"url": "@dyn:u=source.helpId; check(!u, return nil); format('http:\/\/api.gdugm.cn\/book\/info?&bookId=%@', u)"
 	}
 }
